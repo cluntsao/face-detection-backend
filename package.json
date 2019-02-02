@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "CL Tsao",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.9"
