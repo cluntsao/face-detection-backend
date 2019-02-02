@@ -39,6 +39,6 @@ app.put('/image', image.handleImage(knex))
 app.post('/imageurl', image.handleApiCall())
 
 
-app.listen(PORT, () => {
-    console.log(`api listening on port ${PORT}`)
+app.listen(process.env.PORT || PORT, () => {
+    console.log(`api listening on port ${process.env.PORT}`)
 })
