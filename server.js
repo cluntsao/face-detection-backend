@@ -2,9 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const cors = require("cors");
-const Signin = require("./controllers/Signin");
-const Register = require("./controllers/Register");
-const Profile = require("./controllers/Profile");
+const Signin = require("./controllers/signin");
+const Register = require("./controllers/register");
+const Profile = require("./controllers/profile");
 const image = require('./controllers/image');
 const knex = require('knex')({
     client: 'pg',
