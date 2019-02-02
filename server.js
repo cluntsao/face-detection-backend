@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.json("Hello World!")
+    res.json("Hello World!");
 })
 
 app.post('/signin', Signin.handleSignin(knex, bcrypt))
