@@ -16,9 +16,7 @@ const knex = require('knex')({
     }
   });
 
-
-// const PORT = process.env.PORT;
-const PORT = 3001;
+const PORT = process.env.PORT || 3001
 const app = express();
 
 app.use(bodyParser.json());
@@ -39,6 +37,6 @@ app.put('/image', image.handleImage(knex))
 app.post('/imageurl', image.handleApiCall())
 
 
-app.listen(process.env.PORT || PORT, () => {
-    console.log(`api listening on port ${process.env.PORT}`)
+app.listen(PORT, () => {
+    console.log(`api listening on port ${PORT}`)
 })
