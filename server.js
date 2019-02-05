@@ -6,15 +6,20 @@ const Signin = require("./controllers/signin.js");
 const Register = require("./controllers/register.js");
 const Profile = require("./controllers/profile.js");
 const image = require('./controllers/image.js');
+// const knex = require('knex')({
+//     client: 'pg',
+//     connection: {
+//       host : '127.0.0.1',
+//       user : 'postgres',
+//       password : '8815',
+//       database : 'smartbrain'
+//     }
+//   });
+
 const knex = require('knex')({
-    client: 'pg',
-    connection: {
-      host : '127.0.0.1',
-      user : 'postgres',
-      password : '8815',
-      database : 'smartbrain'
-    }
-  });
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
+})
 
 const PORT = process.env.PORT || 3001
 const app = express();
